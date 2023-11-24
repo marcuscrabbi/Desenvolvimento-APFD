@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Editor de Texto</title>
+   <link rel="stylesheet" href="../css/main.css">
+   <script src="https://cdn.tiny.cloud/1/7v1j0e710cu5dygce7aigvd6yvgs6gsn1yh28y20jx22ou9i/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"></script>
+   <script src="../js/main.js"></script>
+   <script src="../js/strings.js" defer></script>
+   <script src="../js/substituicoes.js"></script>
+</head>
+
+<body>
+   <div id="editor">
+      <div id="texto"></div>
+      <script>
+         tinymce.init({
+            selector: '#texto',
+            skin: "oxide-dark",
+            content_css: "dark",
+            branding: false,
+            statusbar: false,
+            plugins: 'lists link image code paste textpattern',
+            textpattern_patterns: [
+               { start: 'aa', replacement: 'à' },
+               { start: 'acao', replacement: 'ação' },
+               { start: 'acoes', replacement: 'ações' },
+               { start: 'amanha', replacement: 'amanhã' },
+               { start: 'ambito', replacement: 'âmbito' },
+               { start: 'animo', replacement: 'ânimo' },
+               { start: 'angulo', replacement: 'ângulo' },
+               { start: 'ate', replacement: 'até' },
+               { start: 'cafe', replacement: 'café' },
+               { start: 'con', replacement: 'conduzido' },
+               { start: 'cona', replacement: 'conduzida' },
+               { start: 'conjuge', replacement: 'cônjuge' },
+               { start: 'çao', replacement: 'ção' },
+               { start: 'çoes', replacement: 'ções' },
+               { start: 'dec', replacement: 'declarante' },
+               { start: 'dep', replacement: 'depoente' },
+               { start: 'dificil', replacement: 'difícil' },
+               { start: 'dificeis', replacement: 'difíceis' },
+               { start: 'diligencia', replacement: 'diligência' },
+               { start: 'diligencias', replacement: 'diligências' },
+               { start: 'ee', replacement: 'é' },
+               { start: 'ecao', replacement: 'eção' },
+               { start: 'ecoes', replacement: 'eções' },
+               { start: 'facil', replacement: 'fácil' },
+               { start: 'familia', replacement: 'família' },
+               { start: 'familias', replacement: 'famílias' },
+               { start: 'historico', replacement: 'histórico' },
+               { start: 'historicos', replacement: 'históricos' },
+               { start: 'icao', replacement: 'ição' },
+               { start: 'icoes', replacement: 'ições' },
+               { start: 'incrivel', replacement: 'incrível' },
+               { start: 'incriveis', replacement: 'incríveis' },
+               { start: 'inf', replacement: 'informante' },
+               { start: 'irmao', replacement: 'irmão' },
+               { start: 'irmaos', replacement: 'irmãos' },
+               { start: 'isao', replacement: 'isão' },
+               { start: 'isoes', replacement: 'isões' },
+               { start: 'lampada', replacement: 'lâmpada' },
+               { start: 'mae', replacement: 'mãe' },
+               { start: 'manha', replacement: 'manhã' },
+               { start: 'mao', replacement: 'mão' },
+               { start: 'maos', replacement: 'mãos' },
+               { start: 'materia', replacement: 'matéria' },
+               { start: 'medico', replacement: 'médico' },
+               { start: 'medica', replacement: 'médica' },
+               { start: 'memoria', replacement: 'memória' },
+               { start: 'memorias', replacement: 'memórias' },
+               { start: 'medio', replacement: 'médio' },
+               { start: 'ncao', replacement: 'nção' },
+               { start: 'ncoes', replacement: 'nções' },
+               { start: 'numero', replacement: 'número' },
+               { start: 'numeros', replacement: 'números' },
+               { start: 'ocao', replacement: 'oção' },
+               { start: 'ocoes', replacement: 'oções' },
+               { start: 'pcao', replacement: 'pção' },
+               { start: 'pcoes', replacement: 'pções' },
+               { start: '/pa', replacement: 'Pouso Alegre' },
+               { start: '/PA', replacement: 'POUSO ALEGRE' },
+               { start: 'pm', replacement: 'Polícia Militar' },
+               { start: 'pms', replacement: 'policiais militares' },
+               { start: 'presidio', replacement: 'presídio' },
+               { start: 'propria', replacement: 'própria' },
+               { start: 'proprias', replacement: 'próprias' },
+               { start: 'proprio', replacement: 'próprio' },
+               { start: 'proprios', replacement: 'próprios' },
+               { start: 'nao', replacement: 'não' },
+               { start: 'q', replacement: 'que' },
+               { start: 'Q', replacement: 'Que' },
+               { start: 'rcao', replacement: 'rção' },
+               { start: 'rcoes', replacement: 'rções' },
+               { start: 'residencia', replacement: 'residência' },
+               { start: 'residencias', replacement: 'residências' },
+               { start: 'saude', replacement: 'saúde' },
+               { start: 'sera', replacement: 'será' },
+               { start: 'ssao', replacement: 'ssão' },
+               { start: 'ssoes', replacement: 'ssões' },
+               { start: 'tb', replacement: 'também' },
+               { start: 'tenis', replacement: 'tênis' },
+               { start: 'tambem', replacement: 'também' },
+               { start: 'traf', replacement: 'tráfico' },
+               { start: 'trafico', replacement: 'tráfico' },
+               { start: 'tres', replacement: 'três' },
+               { start: 'ucao', replacement: 'ução' },
+               { start: 'ucoes', replacement: 'uções' },
+               { start: 'urgencia', replacement: 'urgência' },
+               { start: 'ultimo', replacement: 'último' },
+               { start: 'usuario', replacement: 'usuário' },
+               { start: 'usuarios', replacement: 'usuários' },
+               { start: 'veiculo', replacement: 'veículo' },
+               { start: 'veiculos', replacement: 'veículos' },
+               { start: 'voce', replacement: 'você' },
+               { start: 'voces', replacement: 'vocês' }
+            ],
+            browser_spellcheck: true,
+            menubar: 'edit format table Apreensao Autuacao Despacho Ferramentas Oficios Prompts Utilidades',
+            menu: {
+               Apreensao: {
+                  title: 'Auto de Apreensão',
+                  items: 'Apreensao2'
+               },
+               Autuacao: {
+                  title: 'Autuação',
+                  items: 'APFD EAMP BOC TCO Diligencia PAAI AAFAI APFDAAFAI'
+               },
+               Despacho: {
+                  title: 'Despachos',
+                  items: 'Local Materia'
+               },
+               Ferramentas: {
+                  title: 'Ferramentas',
+                  items: 'Dinheiro Oitiva OitivaPDF Celular Mandado'
+               },
+               Oficios: {
+                  title: 'Ofícios',
+                  items: 'Presidio LiberdadeFianca LiberdadeNRat'
+               },
+               Prompts: {
+                  title: 'Prompts',
+                  items: 'Prompt1 Prompt2 Prompt3 Prompt4 Prompt5 Prompt6 Prompt7 Prompt8 Prompt9 Prompt10 Prompt11 Prompt12 Prompt13 Prompt14 Prompt15 Prompt16'
+               },
+               Utilidades: {
+                  title: 'Utilidades',
+                  items: 'Util1 Util2 Util3 Util4 Util5 Util6 Util7 Util8 Util9 Util10'
+               }
+            },
+            toolbar: 'undo redo | bold italic underline | forecolor | alignleft aligncenter alignright alignjustify | fontNormal fontLarge select | uppercase lowercase titlecase | removebreaks dash print clearall',
+            contextmenu: 'undo redo | copy paste | bold italic underline | forecolor | uppercase lowercase titlecase | removebreaks dash print load',
+            paste_as_text: true,
+            resize: false,
+            toolbar_sticky: true,
+            setup: function (editor) {
+               //lógica para carregar o conteúdo salvo quando o editor for inicializado
+               editor.on('init', function () {
+                  var conteudoSalvo = localStorage.getItem('conteudoSalvo');
+                  if (conteudoSalvo) {
+                     editor.setContent(conteudoSalvo);
+                  }
+               });
+
+               // Função para salvar o conteúdo
+               function salvarConteudo() {
+                  var conteudo = editor.getContent();
+                  localStorage.setItem('conteudoSalvo', conteudo);
+               }
+
+               // Configurar o salvamento automático
+               setInterval(salvarConteudo, 60000); // Salva a cada minuto
+
+               //Auto de Apreensão
+               editor.ui.registry.addMenuItem('Apreensao2', {
+                  text: 'Auto de Apreensão',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoApreensao);
+                  }
+               });
+               //Autuação - APFD
+               editor.ui.registry.addMenuItem('APFD', {
+                  text: 'APFD',
+                  onAction: function () {
+                     copiarTextoMenu('APFD ________/2023');
+                  }
+               });
+               //Autuação - EAMP
+               editor.ui.registry.addMenuItem('EAMP', {
+                  text: 'EAMP',
+                  onAction: function () {
+                     copiarTextoMenu('EAMP ________/2023');
+                  }
+               });
+               //Autuação - BOC
+               editor.ui.registry.addMenuItem('BOC', {
+                  text: 'BOC',
+                  onAction: function () {
+                     copiarTextoMenu('BOC ________/2023');
+                  }
+               });
+               //Autuação - TCO
+               editor.ui.registry.addMenuItem('TCO', {
+                  text: 'TCO',
+                  onAction: function () {
+                     copiarTextoMenu('TCO ________/2023');
+                  }
+               });
+               //Autuação - Diligência
+               editor.ui.registry.addMenuItem('Diligencia', {
+                  text: 'Diligência Preliminar',
+                  onAction: function () {
+                     copiarTextoMenu('Diligência Preliminar ________/2023');
+                  }
+               });
+               //Autuação - PAAI
+               editor.ui.registry.addMenuItem('PAAI', {
+                  text: 'PAAI',
+                  onAction: function () {
+                     copiarTextoMenu('PAAI ________/2023');
+                  }
+               });
+               //Autuação - AAFAI
+               editor.ui.registry.addMenuItem('AAFAI', {
+                  text: 'AAFAI',
+                  onAction: function () {
+                     copiarTextoMenu('AAFAI ________/2023');
+                  }
+               });
+               //Autuação - APFD/AAFAI
+               editor.ui.registry.addMenuItem('APFDAAFAI', {
+                  text: 'APFD/AAFAI',
+                  onAction: function () {
+                     copiarTextoMenu('APFD/AAFAI ________/2023');
+                  }
+               });
+               //Despachos - Razão do local
+               editor.ui.registry.addMenuItem('Local', {
+                  text: 'Transferência - Razão do local',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoLocal);
+                  }
+               });
+               //Despachos - Razão da matéria
+               editor.ui.registry.addMenuItem('Materia', {
+                  text: 'Transferência - Razão da matéria',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoMateria);
+                  }
+               });
+               //Ferramentas - Contador de dinheiro
+               editor.ui.registry.addMenuItem('Dinheiro', {
+                  text: 'Contador de dinheiro',
+                  onAction: function () {
+                     abrirContadorDinheiro();
+                  }
+               });
+               //Ferramentas - Formulário de oitiva do conduzido
+               editor.ui.registry.addMenuItem('Oitiva', {
+                  text: 'Formulário de oitiva do conduzido',
+                  onAction: function () {
+                     abrirModeloOitiva();
+                  }
+               });
+               //Ferramentas - Oitiva em PDF
+               editor.ui.registry.addMenuItem('OitivaPDF', {
+                  text: 'Oitiva do conduzido (PDF)',
+                  onAction: function () {
+                     openPdfOitiva();
+                  }
+               });
+               //Ferramentas - Senha de acesso do celular
+               editor.ui.registry.addMenuItem('Celular', {
+                  text: 'Senha do celular (PDF)',
+                  onAction: function () {
+                     openPdfCelular();
+                  }
+               });
+               //Ferramentas - Mandado de prisão
+               editor.ui.registry.addMenuItem('Mandado', {
+                  text: 'Mandado de Prisão',
+                  onAction: function () {
+                     abrirModeloMandado();
+                  }
+               });
+               //Ofícios ao presídio
+               editor.ui.registry.addMenuItem('Presidio', {
+                  text: 'Anexos ao Presídio',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoPresidio);
+                  }
+               });
+               //Ofícios - Liberdade por fiança
+               editor.ui.registry.addMenuItem('LiberdadeFianca', {
+                  text: 'À Justiça - Liberdade por fiança',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoJusticaFianca);
+                  }
+               });
+               //Ofícios - Não ratificação de prisão
+               editor.ui.registry.addMenuItem('LiberdadeNRat', {
+                  text: 'À Justiça - Não-ratificado',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoJusticaNRat);
+                  }
+               });
+               //Prompt 1
+               editor.ui.registry.addMenuItem('Prompt1', {
+                  text: 'Corrigir e reorganizar texto',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoReorganizar);
+                  }
+               });
+               //Prompt 2
+               editor.ui.registry.addMenuItem('Prompt2', {
+                  text: '**Otimizar a linguagem do texto (mantendo o QUE e ponto-e-vírgula)',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoOtimizar);
+                  }
+               });
+               //Prompt 3
+               editor.ui.registry.addMenuItem('Prompt3', {
+                  text: 'Corrigir e reorganizar texto, e com inclusão do QUE e ponto-e-vírgula',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoCorrigir);
+                  }
+               });
+               //Prompt 4
+               editor.ui.registry.addMenuItem('Prompt4', {
+                  text: 'Formatar texto com QUE e com ponto-e-vírgula',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoQUEPontoeVirgula);
+                  }
+               });
+               //Prompt 5
+               editor.ui.registry.addMenuItem('Prompt5', {
+                  text: '**Condutor do flagrante - a partir do histórico do REDS',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoCondutor);
+                  }
+               });
+               //Prompt 6
+               editor.ui.registry.addMenuItem('Prompt6', {
+                  text: 'Condutor do flagrante - inserir cabeçalho, desfecho, QUE e ponto-e-vírgula',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoCondutorFormatar);
+                  }
+               });
+               //Prompt 7
+               editor.ui.registry.addMenuItem('Prompt7', {
+                  text: '**Testemunha policial militar - a partir da oitiva do condutor do flagrante',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoTestemunha);
+                  }
+               });
+               //Prompt 8
+               editor.ui.registry.addMenuItem('Prompt8', {
+                  text: 'Testemunha - a partir da oitiva do condutor do flagrante',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoTestemunhaOutras);
+                  }
+               });
+               //Prompt 9
+               editor.ui.registry.addMenuItem('Prompt9', {
+                  text: '**Vítima - a partir da oitiva do condutor do flagrante',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoVitimaB);
+                  }
+               });
+               //Prompt 10
+               editor.ui.registry.addMenuItem('Prompt10', {
+                  text: 'Vítima (Maria da Penha) - a partir da oitiva do condutor do flagrante',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoVitimaMariadaPenha);
+                  }
+               });
+               //Prompt 11
+               editor.ui.registry.addMenuItem('Prompt11', {
+                  text: 'Vítima - a partir de uma relação de tópicos',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoVitimaA);
+                  }
+               });
+               //Prompt 12
+               editor.ui.registry.addMenuItem('Prompt12', {
+                  text: '**Autor - a partir da oitiva do condutor do flagrante',
+                  onAction: function () {
+                     copiarTextoPrompt(varTextoAutorA);
+                  }
+               });
+               //Prompt 13
+               editor.ui.registry.addMenuItem('Prompt13', {
+                  text: 'Recomendação de perguntas ao condutor (a partir da oitiva do condutor)',
+                  onAction: function () {
+                     copiarTextoPrompt(varPerguntasCondutor);
+                  }
+               });
+               //Prompt 14
+               editor.ui.registry.addMenuItem('Prompt14', {
+                  text: 'Recomendação de perguntas à vítima (a partir da oitiva da vítima)',
+                  onAction: function () {
+                     copiarTextoPrompt(varPerguntasVitima);
+                  }
+               });
+               //Prompt 15
+               editor.ui.registry.addMenuItem('Prompt15', {
+                  text: 'Recomendação de perguntas à testemunha (a partir da oitiva do condutor)',
+                  onAction: function () {
+                     copiarTextoPrompt(varPerguntasTestemunha);
+                  }
+               });
+               //Prompt 16
+               editor.ui.registry.addMenuItem('Prompt16', {
+                  text: 'Recomendação de perguntas ao conduzido (a partir da oitiva do condutor)',
+                  onAction: function () {
+                     copiarTextoPrompt(varPerguntasConduzido);
+                  }
+               });
+               //Utilidades 1
+               editor.ui.registry.addMenuItem('Util1', {
+                  text: 'E-mail do Cartório Central',
+                  onAction: function () {
+                     copiarTextoMenu('cartorio.drpc.pousoalegre@hotmail.com');
+                  }
+               });
+               //Utilidades 2
+               editor.ui.registry.addMenuItem('Util2', {
+                  text: 'Conduzido que não quis assinar',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoNaoAssinou);
+                  }
+               });
+
+               //Utilidades 3
+               editor.ui.registry.addMenuItem('Util3', {
+                  text: 'PM que não participou da ocorrência',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoPMNao);
+                  }
+               });
+               //Utilidades 4
+               editor.ui.registry.addMenuItem('Util4', {
+                  text: 'Comunicação de Mandado de Prisão',
+                  onAction: function () {
+                     copiarTextoMenu(varTextoMandado);
+                  }
+               });
+               //Utilidades 5
+               editor.ui.registry.addMenuItem('Util5', {
+                  text: 'Conduzido embriagado',
+                  onAction: function () {
+                     copiarTextoMenu(varConduzidoEmbriagado);
+                  }
+               });
+               //Utilidades 6
+               editor.ui.registry.addMenuItem('Util6', {
+                  text: 'Sistema PJe indisponível',
+                  onAction: function () {
+                     copiarTextoMenu(varPjeIndisponivel);
+                  }
+               });
+               //Utilidades 7
+               editor.ui.registry.addMenuItem('Util7', {
+                  text: 'Hospital que não forneceu documentação médica',
+                  onAction: function () {
+                     copiarTextoMenu(varHospitalDocMedica);
+                  }
+               });
+               //Utilidades 8
+               editor.ui.registry.addMenuItem('Util8', {
+                  text: 'Encaminhamento de AAFAI e de adolescente infrator ao Promotor',
+                  onAction: function () {
+                     copiarTextoMenu(varAAFAI);
+                  }
+               });
+               //Utilidades 9
+               editor.ui.registry.addMenuItem('Util9', {
+                  text: 'Mandado de prisão não pôde ser comunicado devido a falta de internet',
+                  onAction: function () {
+                     copiarTextoMenu(varMandadoSemInternet);
+                  }
+               });
+               //Utilidades 10
+               editor.ui.registry.addMenuItem('Util10', {
+                  text: 'Falta de material de escritório no plantão',
+                  onAction: function () {
+                     copiarTextoMenu(varMaterialEscritorio);
+                  }
+               });
+
+               //Menu de contexto para transformar o texto selecionado em maiúsculas
+               editor.ui.registry.addMenuItem('uppercase', {
+                  text: 'Uppercase',
+                  icon: 'action-prev',
+                  onAction: function () {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+                     if (selectedText) {
+                        editor.execCommand('mceInsertContent', false, selectedText.toUpperCase());
+                     }
+                  }
+               });
+
+               // Botão para transformar o texto selecionado em maiúsculas
+               editor.ui.registry.addButton('uppercase', {
+                  tooltip: 'Uppercase',
+                  icon: 'action-prev',
+                  onAction: function (_) {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+                     if (selectedText) {
+                        editor.execCommand('mceInsertContent', false, selectedText.toUpperCase());
+                     }
+                  }
+               });
+
+               // Botão para definir todo o texto com tamanho de fonte padrão
+               editor.ui.registry.addButton('fontNormal', {
+                  tooltip: 'Fonte Normal',
+                  icon: 'comment',
+                  onAction: function (_) {
+                     editor.formatter.register('customfontsize', {
+                        inline: 'span',
+                        styles: {
+                           fontSize: '16px'
+                        }
+                     });
+                     editor.formatter.apply('customfontsize');
+                  }
+               });
+
+               // Botão para definir todo o texto com tamanho de fonte maior
+               editor.ui.registry.addButton('fontLarge', {
+                  tooltip: 'Fonte Grande',
+                  icon: 'comment-add',
+                  onAction: function (_) {
+                     editor.formatter.register('customfontsize', {
+                        inline: 'span',
+                        styles: {
+                           fontSize: '32px'
+                        }
+                     });
+                     editor.formatter.apply('customfontsize');
+                  }
+               });
+
+               // Botão para selecionar todo o texto
+               editor.ui.registry.addButton('select', {
+                  tooltip: 'Selecionar todo o texto',
+                  icon: 'select-all',
+                  onAction: function (_) {
+                     editor.execCommand('selectAll');
+                  }
+               });
+
+               //Menu de contexto para transformar o texto selecionado em minúsculas
+               editor.ui.registry.addMenuItem('lowercase', {
+                  text: 'Lowercase',
+                  icon: 'action-next',
+                  onAction: function () {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+                     if (selectedText) {
+                        editor.execCommand('mceInsertContent', false, selectedText.toLowerCase());
+                     }
+                  }
+               });
+
+               // Botão para transformar o texto selecionado em minúsculas
+               editor.ui.registry.addButton('lowercase', {
+                  tooltip: 'Lowercase',
+                  icon: 'action-next',
+                  onAction: function (_) {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+                     if (selectedText) {
+                        editor.execCommand('mceInsertContent', false, selectedText.toLowerCase());
+                     }
+                  }
+               });
+
+               //Menu de contexto para transformar o texto selecionado em Title Case
+               editor.ui.registry.addMenuItem('titlecase', {
+                  text: 'Title Case',
+                  icon: 'change-case',
+                  onAction: function () {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+                     if (selectedText) {
+                        var titleCaseText = selectedText.replace(/\w\S*/g, function (txt) {
+                           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                        });
+                        editor.execCommand('mceInsertContent', false, titleCaseText);
+                     }
+                  }
+               });
+
+               // Botão para transformar o texto selecionado em Title Case
+               editor.ui.registry.addButton('titlecase', {
+                  tooltip: 'Title Case',
+                  icon: 'change-case',
+                  onAction: function (_) {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+                     if (selectedText) {
+                        var titleCaseText = selectedText.replace(/\w\S*/g, function (txt) {
+                           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                        });
+                        editor.execCommand('mceInsertContent', false, titleCaseText);
+                     }
+                  }
+               });
+
+               //Menu de contexto para remover quebras de linha do texto selecionado
+               editor.ui.registry.addMenuItem('removebreaks', {
+                  text: 'Remover quebras de linha',
+                  icon: 'vertical-align',
+                  onAction: function () {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+
+                     if (selectedText) {
+                        var newText = selectedText.replace(/(\r\n|\n|\r)/gm, ' ');
+
+                        editor.execCommand('mceInsertContent', false, newText);
+                     }
+                  }
+               });
+
+               // Botão para remover quebras de linha do texto selecionado
+               editor.ui.registry.addButton('removebreaks', {
+                  icon: 'vertical-align',
+                  tooltip: 'Remover quebras de linha',
+                  onAction: function (_) {
+                     var selectedText = editor.selection.getContent({ format: 'text' });
+
+                     if (selectedText) {
+                        var newText = selectedText.replace(/(\r\n|\n|\r)/gm, ' ');
+
+                        editor.execCommand('mceInsertContent', false, newText);
+                     }
+                  }
+               });
+
+               //Menu de contexto para inserir a divisoria
+               editor.ui.registry.addMenuItem('dash', {
+                  text: 'Inserir divisória',
+                  icon: 'horizontal-rule',
+                  onAction: function () {
+                     editor.insertContent('<hr />');
+                  }
+               });
+
+               // Botão para inserir a divisoria
+               editor.ui.registry.addButton('dash', {
+                  icon: 'horizontal-rule',
+                  tooltip: 'Inserir divisória',
+                  onAction: function (_) {
+                     editor.insertContent('<hr />');
+                  }
+               });
+
+               //Menu de contexto para imprimir texto selecionado
+               editor.ui.registry.addMenuItem('print', {
+                  text: 'Imprimir texto selecionado',
+                  icon: 'print',
+                  onAction: function () {
+                     var selectedText = editor.selection.getContent({ format: 'html' });
+                     if (selectedText) {
+                        var printWindow = window.open('', '_blank');
+                        printWindow.document.open();
+                        printWindow.document.write('<html><head><title>Imprimir Texto Selecionado</title></head><body>');
+                        printWindow.document.write(selectedText);
+                        printWindow.document.write('</body></html>');
+                        printWindow.document.close();
+                        printWindow.print();
+                     }
+                  }
+               });
+
+               // Imprimir texto selecionado
+               editor.ui.registry.addButton('print', {
+                  tooltip: 'Imprimir texto selecionado',
+                  icon: 'print',
+                  onAction: function (_) {
+                     var selectedText = editor.selection.getContent({ format: 'html' });
+                     if (selectedText) {
+                        var printWindow = window.open('', '_blank');
+                        printWindow.document.open();
+                        printWindow.document.write('<html><head><title>Imprimir Texto Selecionado</title></head><body>');
+                        printWindow.document.write(selectedText);
+                        printWindow.document.write('</body></html>');
+                        printWindow.document.close();
+                        printWindow.print();
+                     }
+                  }
+               });
+
+               //Menu de contexto para carregar o conteúdo salvo quando o editor for inicializado
+               editor.ui.registry.addMenuItem('load', {
+                  text: 'Local Storage',
+                  icon: 'browse',
+                  onAction: function () {
+                     var conteudoSalvo = localStorage.getItem('conteudoSalvo');
+                     if (conteudoSalvo) {
+                        editor.setContent(conteudoSalvo);
+                     }
+                  }
+               });
+
+               // Botão para limpar todo o texto do editor
+               editor.ui.registry.addButton('clearall', {
+                  tooltip: 'Limpar texto',
+                  icon: 'remove',
+                  onAction: function (_) {
+                     if (window.confirm("Você realmente deseja limpar todo o texto?")) {
+                        editor.setContent('');
+                     }
+                  }
+               });
+
+
+            }
+         });
+
+
+
+      </script>
+   </div>
+
+</body>
+
+</html>

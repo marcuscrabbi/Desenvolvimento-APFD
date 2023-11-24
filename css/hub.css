@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #333;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#hubContainer {
+    width: 70%;
+    padding: 20px;
+    background-color: #222f3e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(241, 240, 240, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #2f3742;
+    border: none;
+    color: #ffffff;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 1px;
+    margin-left: 20%;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #414c5c;
+    box-shadow: 0 8px 14px 0 rgba(211, 209, 209, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+select, input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #2f3742;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+select {
+    color: #666; /* Cor cinza escuro para o "placeholder" */
+}
+
+select option:not([disabled]) {
+    color: #ffffff; /* Cor branca padrão para opções válidas */
+}
+
+ul {
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+#dateTimeContainer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+}

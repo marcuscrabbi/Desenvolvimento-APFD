@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oitiva do Conduzido</title>
+    <link rel="stylesheet" href="../css/oitiva.css">
+    <script src="../js/oitiva.js" defer></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="container">
+    <h2>OITIVA DO CONDUZIDO</h2>
+    <h3>Gênero</h3>
+    <select id="genero">
+        <option value="homem">Homem</option>
+        <option value="mulher">Mulher</option>
+    </select>
+    <h3>Advogado</h3>		
+    <label for="advogado">Advogado:</label>
+    <select id="advogado">
+        <option value="sem_advogado">Sem advogado</option>
+        <option value="com_advogado">Com advogado</option>
+        <option value="com_advogada">Com advogada</option>
+    </select>
+    <label for="nome_advogado">Nome do advogado:</label>
+    <input type="text" id="nome_advogado" size="30">
+    <label for="oab">OAB:</label>
+    <input type="text" id="oab" size="10">
+    <h3>Idade</h3>
+    <input type="text" id="idade" size="10">
+    <h3>Profissão</h3>
+    <select id="profissao">
+        <option value="exerce_profissao">Que exerce a profissão de...</option>
+        <option value="exerce_profissao_renda_mensal">Que exerce a profissão de ..., onde tem uma renda básica mensal de R$...</option>
+        <option value="exerce_profissao_renda_semanal">Que exerce a profissão de ..., onde tem uma renda básica semanal de R$...</option>
+        <option value="exerce_profissao_renda_diaria">Que exerce a profissão de ..., onde tem uma renda básica diária de R$...</option>
+        <option value="exerce_trabalha_como">Que trabalha...</option>
+        <option value="exerce_trabalha">Que é...</option>
+        <option value="nao_trabalha">Que não exerce nenhuma profissão</option>
+    </select>
+    <label for="texto_profissao">Profissão: </label>
+    <input type="text" id="trabalho" size="20">
+    <label for="texto_renda">Renda: R$</label>
+    <input type="text" id="renda" size="7">
+    <label for="texto_renda_final">,00</label>
+    <h3>Estado Civil</h3>
+    <select id="estado_civil">
+        <option value="sem_estado_civil">Sem estado civil</option>
+        <option value="solteiro">Solteiro</option>
+        <option value="casado">Casado</option>
+        <option value="uniao_estavel">União Estável</option>
+        <option value="viuvo">Viúvo</option>
+        <option value="divorciado">Divorciado</option>
+    </select>
+    <h3>Filhos</h3>
+    <select id="filhos">
+        <option value="sem_filhos">Sem filhos</option>
+        <option value="filho_independente">Possui um filho, o qual é independente</option>
+        <option value="filhos_independentes">Possui filhos, os quais são independentes</option>
+        <option value="um_filho">Possui um filho dependente</option>
+        <option value="uma_filha">Possui uma filha dependente</option>
+        <option value="mais_de_um_filho">Possui mais de um filho dependente</option>
+    </select>
+    <label for="texto_idades">Idades: </label>
+    <input type="text" id="idade_1" size="10">
+    <input type="text" id="idade_2" size="10">
+    <input type="text" id="idade_3" size="10">
+    <input type="text" id="idade_4" size="10">
+    <input type="text" id="idade_5" size="10">
+    <h3>Saúde</h3>
+    <select id="saude">
+        <option value="saude_sem_filho">Sem filhos</option>
+        <option value="boa_saude">Seu filho tem boa saúde</option>
+        <option value="boa_saude_filha">Sua filha tem boa saúde</option>
+        <option value="boas_saudes">Seus filhos têm boa saúde</option>
+        <option value="saude_deficiencia">Seu filho possui problemas de saúde</option>
+    </select>
+    <label for="texto_deficiencia">Problemas de saúde: QUE </label>
+    <input type="text" id="deficiencia" size="70">
+    <h3>Dependentes</h3>
+    <select id="dependente">
+        <option value="dependente_sem_filho">Sem filhos</option>
+        <option value="filho_dependente">Seu filho está aos cuidados da mãe</option>
+        <option value="filha_dependente">Sua filha está aos cuidados da mãe</option>
+        <option value="filhos_dependentes">Seus filhos estão aos cuidados da mãe</option>
+        <option value="filho_dependente_cuidado">Seu filho está aos cuidados...</option>
+    </select>
+    <label for="texto_cuidados">QUE seu filho está aos cuidados </label>
+    <input type="text" id="cuidados" size="50">
+    <h3>Prisões</h3>
+    <select id="preso">
+        <option value="nunca_preso">Nunca foi preso(a)</option>
+        <option value="sim_preso">Já foi preso(a)</option>
+    </select>
+    <label for="texto_prisoes">Já foi preso(a) por: </label>
+    <input type="text" id="motivo_prisao" size="60">
+    <h3>Celular apreendido</h3>
+    <select id="celular">
+        <option value="sem_celular">Não há celular apreendido</option>
+        <option value="nao_autoriza">Não autoriza a análise</option>
+        <option value="autoriza">Autoriza a análise</option>
+        <option value="autoriza_sem_senha">Autoriza a análise, mas não sabe a senha</option>
+    </select>
+    <label for="texto_senha_celular">Senha de acesso do celular: </label>
+    <input type="text" id="senha_celular" size="30">
+    <h3>Fiança</h3>
+    <select id="fianca">
+        <option value="sem_fianca">Não há fiança</option>
+        <option value="com_fianca">Há fiança</option>
+    </select>
+    <label for="texto_fianca">Valor da fiança: R$</label>
+    <input type="text" id="valor_fianca" size="7">
+    <label for="zeros_fianca">,00</label>
+    <h3>Comunicação à família</h3>
+    <select id="familia">
+        <option value="familia_ciente">Família está ciente que foi conduzido</option>
+        <option value="familiar_sem_telefone">Deseja comunicar, mas não sabe o telefone</option>
+        <option value="familiar_com_telefone">Deseja comunicar, e sabe informar o telefone</option>
+        <option value="sem_comunicacao_1">Não sabe informar a quem comunicar a sua prisão</option>
+        <option value="sem_comunicacao_2">Não deseja comunicar a sua prisão</option>
+    </select>
+    <label for="texto_familia">Que deseja comunicar a sua prisão a: </label>
+    <input type="text" id="nome_familia" size="30">
+    <label for="texto_telefone_familia">Número de telefone: </label>
+    <input type="text" id="telefone_familia" size="20">
+    <h3>Declarações</h3>
+    <select id="declaracoes">
+        <option value="sem_declaracoes">Sem declarações</option>
+        <option value="com_declaracoes">Com declarações</option>
+    </select>
+    <h3>Silêncio</h3>
+    <select id="silencio">
+        <option value="sem_silencio">Sem silêncio</option>
+        <option value="silencio_total">Silêncio</option>
+        <option value="silencio_parcial">Silêncio parcial</option>
+    </select>
+    <br>
+	<div class="button-center">
+    <button onclick="gerarTexto()" title="Gerar texto"><img src="../images/checked_2.png" alt="Finalizar" class="icon_a"></button>	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

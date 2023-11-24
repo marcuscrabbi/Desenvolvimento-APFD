@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Dinheiro</title>
+    <link rel="stylesheet" href="../css/dinheiro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contador de Dinheiro</h1>
+        <button type="button" onclick="limpar()" title="Limpar"><img src="../images/broom.png" alt="Limpar" class="icon_a"></button>
+        <form id="calculadora">
+            <div class="input-group">
+                <label for="nota200">R$200</label>
+                <input type="number" id="nota200-1" value="0" min="0">
+                <input type="number" id="nota200-2" value="0" min="0">
+                <input type="number" id="nota200-3" value="0" min="0">
+                <input type="number" id="nota200-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('nota200-1')">+1</button>
+				<button type="button" onclick="adicionar5('nota200-1')">+5</button>
+				<button type="button" onclick="adicionar10('nota200-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="nota100">R$100</label>
+                <input type="number" id="nota100-1" value="0" min="0">
+                <input type="number" id="nota100-2" value="0" min="0">
+                <input type="number" id="nota100-3" value="0" min="0">
+                <input type="number" id="nota100-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('nota100-1')">+1</button>
+				<button type="button" onclick="adicionar5('nota100-1')">+5</button>
+				<button type="button" onclick="adicionar10('nota100-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="nota50">R$50</label>
+                <input type="number" id="nota50-1" value="0" min="0">
+                <input type="number" id="nota50-2" value="0" min="0">
+                <input type="number" id="nota50-3" value="0" min="0">
+                <input type="number" id="nota50-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('nota50-1')">+1</button>
+				<button type="button" onclick="adicionar5('nota50-1')">+5</button>
+				<button type="button" onclick="adicionar10('nota50-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="nota20">R$20</label>
+                <input type="number" id="nota20-1" value="0" min="0">
+                <input type="number" id="nota20-2" value="0" min="0">
+                <input type="number" id="nota20-3" value="0" min="0">
+                <input type="number" id="nota20-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('nota20-1')">+1</button>
+				<button type="button" onclick="adicionar5('nota20-1')">+5</button>
+				<button type="button" onclick="adicionar10('nota20-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="nota10">R$10</label>
+                <input type="number" id="nota10-1" value="0" min="0">
+                <input type="number" id="nota10-2" value="0" min="0">
+                <input type="number" id="nota10-3" value="0" min="0">
+                <input type="number" id="nota10-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('nota10-1')">+1</button>
+				<button type="button" onclick="adicionar5('nota10-1')">+5</button>
+				<button type="button" onclick="adicionar10('nota10-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="nota5">R$5</label>
+                <input type="number" id="nota5-1" value="0" min="0">
+                <input type="number" id="nota5-2" value="0" min="0">
+                <input type="number" id="nota5-3" value="0" min="0">
+                <input type="number" id="nota5-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('nota5-1')">+1</button>
+				<button type="button" onclick="adicionar5('nota5-1')">+5</button>
+				<button type="button" onclick="adicionar10('nota5-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="nota2">R$2</label>
+                <input type="number" id="nota2-1" value="0" min="0">
+                <input type="number" id="nota2-2" value="0" min="0">
+                <input type="number" id="nota2-3" value="0" min="0">
+                <input type="number" id="nota2-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('nota2-1')">+1</button>
+				<button type="button" onclick="adicionar5('nota2-1')">+5</button>
+				<button type="button" onclick="adicionar10('nota2-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="moeda100">R$1</label>
+                <input type="number" id="moeda100-1" value="0" min="0">
+                <input type="number" id="moeda100-2" value="0" min="0">
+                <input type="number" id="moeda100-3" value="0" min="0">
+                <input type="number" id="moeda100-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('moeda100-1')">+1</button>
+				<button type="button" onclick="adicionar5('moeda100-1')">+5</button>
+				<button type="button" onclick="adicionar10('moeda100-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="moeda50">R$0,50</label>
+                <input type="number" id="moeda50-1" value="0" min="0">
+                <input type="number" id="moeda50-2" value="0" min="0">
+                <input type="number" id="moeda50-3" value="0" min="0">
+                <input type="number" id="moeda50-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('moeda50-1')">+1</button>
+				<button type="button" onclick="adicionar5('moeda50-1')">+5</button>
+				<button type="button" onclick="adicionar10('moeda50-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="moeda25">R$0,25</label>
+                <input type="number" id="moeda25-1" value="0" min="0">
+                <input type="number" id="moeda25-2" value="0" min="0">
+                <input type="number" id="moeda25-3" value="0" min="0">
+                <input type="number" id="moeda25-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('moeda25-1')">+1</button>
+				<button type="button" onclick="adicionar5('moeda25-1')">+5</button>
+				<button type="button" onclick="adicionar10('moeda25-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="moeda10">R$0,10</label>
+                <input type="number" id="moeda10-1" value="0" min="0">
+                <input type="number" id="moeda10-2" value="0" min="0">
+                <input type="number" id="moeda10-3" value="0" min="0">
+                <input type="number" id="moeda10-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('moeda10-1')">+1</button>
+				<button type="button" onclick="adicionar5('moeda10-1')">+5</button>
+				<button type="button" onclick="adicionar10('moeda10-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="moeda5">R$0,05</label>
+                <input type="number" id="moeda5-1" value="0" min="0">
+                <input type="number" id="moeda5-2" value="0" min="0">
+                <input type="number" id="moeda5-3" value="0" min="0">
+                <input type="number" id="moeda5-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('moeda5-1')">+1</button>
+				<button type="button" onclick="adicionar5('moeda5-1')">+5</button>
+				<button type="button" onclick="adicionar10('moeda5-1')">+10</button>
+            </div>
+
+            <div class="input-group">
+                <label for="moeda1">R$0,01</label>
+                <input type="number" id="moeda1-1" value="0" min="0">
+                <input type="number" id="moeda1-2" value="0" min="0">
+                <input type="number" id="moeda1-3" value="0" min="0">
+                <input type="number" id="moeda1-4" value="0" min="0">
+				<button type="button" onclick="adicionar1('moeda1-1')">+1</button>
+				<button type="button" onclick="adicionar5('moeda1-1')">+5</button>
+				<button type="button" onclick="adicionar10('moeda1-1')">+10</button>
+            </div>
+            <button type="button" onclick="calcular()" title="Calcular"><img src="../images/checked_2.png" alt="Calcular" class="icon_a"></button>	    
+        </form>
+        <h2>Total: R$<span id="resultado">0,00</span></h2>
+    </div>
+    <script src="../js/dinheiro.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicação de Mandado de Prisão</title>
+    <link rel="stylesheet" href="../css/mandado.css">
+    <script>
+        function gerarTexto() {
+            var nomePreso = document.getElementById('nomePreso').value;
+            var numeroProcesso = document.getElementById('numeroProcesso').value;
+            var nomeDelegado = document.getElementById('nomeDelegado').value;
+            var generoDelegado = document.querySelector('input[name="generoDelegado"]:checked').value;
+
+            var tituloDelegado = generoDelegado === 'Homem' ? 'do Excelentíssimo Delegado' : 'da Excelentíssima Delegada';
+            var tituloDelegado_2 = generoDelegado === 'Homem' ? 'Dr.' : 'Dra.';
+
+            var texto = `Comunicação de Cumprimento de Mandado de Prisão ${nomePreso} ${numeroProcesso}
+
+MM. Juiz(a) de Direito e Ilustres Servidores(as) do Poder Judiciário,
+
+Venho por meio desta, em cumprimento às determinações ${tituloDelegado} de Polícia, ${tituloDelegado_2} ${nomeDelegado}, transmitir a Vossa Excelência e aos digníssimos(as) servidores(as) da justiça a devida ciência acerca do cumprimento do mandado de prisão em desfavor de ${nomePreso}, conforme preceitua o Mandado de Prisão oriundo dos autos processuais de nº ${numeroProcesso}.
+
+Encontrará anexado a este e-mail o ofício elaborado em atenção ao cumprimento da medida restritiva de liberdade supracitada, ratificando a materialização do ato emanado por este douto juízo.
+
+Respeitosamente,
+Marcus Mota Crabbi
+Escrivão de Polícia`;
+
+            // Copiando o texto para a área de transferência
+            navigator.clipboard.writeText(texto).then(function() {
+                alert('Texto copiado para a área de transferência!');
+            }).catch(function() {
+                alert('Falha ao copiar texto!');
+            });
+        }
+
+        function voltar() {
+            window.open('main.html', '_blank');
+        }
+    </script>
+</head>
+<body>
+	<div class="container">
+		<h2>Comunicação de Mandado de Prisão</h2>
+		<h4>Nome do preso</h4>
+		<input type="text" id="nomePreso" size="50">		
+		<h4>Número do processo</h4>
+		<input type="text" id="numeroProcesso" size="50">		
+		<h4>Nome do Delegado</h4>
+		<input type="text" id="nomeDelegado" size="50">		
+		<h4>Gênero do Delegado</h4>
+		<div class="label-radio">
+			<label><input type="radio" name="generoDelegado" value="Homem" checked> Delegado</label>
+			<label><input type="radio" name="generoDelegado" value="Mulher"> Delegada</label>
+		</div>		
+		<br>
+		<div class="button-group">
+			<button onclick="gerarTexto()" title="Gerar texto"><img src="../images/checked_2.png" alt="Gerar texto" class="icon_a"></button>			
+		</div>
+    </div>
+</body>
+</html>
